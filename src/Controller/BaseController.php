@@ -12,6 +12,9 @@ class BaseController extends Controller
      */
     public function index()
     {
+
+        $this->get('app.imdb.service')->findShow('Agents of S.H.I.E.L.D.');
+
         return $this->render('base/index.html.twig', [
             'controller_name' => 'BaseController',
         ]);
